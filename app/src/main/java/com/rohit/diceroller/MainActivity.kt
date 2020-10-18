@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    private val diceImage : ImageView = findViewById(R.id.dice)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun rollIt() {
         var randNo : Int? = Random.nextInt(6) + 1
-            var diceImage : ImageView = findViewById(R.id.dice)
+
             var setNo  = when(randNo) {
                 1 -> R.drawable.dice_1
                 2 -> R.drawable.dice_2
